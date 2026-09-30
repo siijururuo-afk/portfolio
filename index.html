@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>韦诗舟 · AI 短剧作品集 — 海外内容运营 / 海外短剧编剧</title>
+<meta name="description" content="韦诗舟 · 海外内容运营 / 海外短剧编剧求职作品集：剧本创作、剧库从 0 到 1 搭建、首日 ROI 1.05、自研 AI 编剧工业化 SOP 与项目演示系统、AI 真人短剧成片。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#282c20; --bg2:#111112; --bg3:#1a1d15;
+  --ink:#f4f4ed; --sage:#b4b8a5; --dim:#7d8271;
+  --lime:#d2ff00; --lime2:#b2c73a; --line:rgba(244,244,237,.14);
+  --red:#ff5d47;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--bg2);color:var(--ink);font-family:'Noto Sans SC',sans-serif;overflow-x:hidden;line-height:1.65}
+::selection{background:var(--lime);color:#111}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:1360px;margin:0 auto;padding:0 48px}
+@media(max-width:760px){.wrap{padding:0 20px}}
+
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--lime);width:0;z-index:99}
+nav{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;justify-content:space-between;align-items:center;
+  padding:14px 32px;background:rgba(17,17,18,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .logo{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;color:var(--lime)}
+nav .links{display:flex;gap:22px}
+nav .links a{color:var(--sage);text-decoration:none;font-size:12px;font-family:'IBM Plex Mono',monospace;letter-spacing:.08em;transition:color .2s}
+nav .links a:hover{color:var(--lime)}
+@media(max-width:900px){nav .links{display:none}}
+
+/* hero */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;position:relative;
+  background:radial-gradient(1100px 620px at 80% 15%,rgba(210,255,0,.08),transparent 60%),
+             radial-gradient(800px 500px at 8% 88%,rgba(178,199,58,.06),transparent 60%),var(--bg2);
+  border-bottom:1px solid var(--line);overflow:hidden}
+.hero .kicker{font-family:'IBM Plex Mono',monospace;color:var(--lime);font-size:13px;letter-spacing:.32em;margin-bottom:26px}
+.hero h1{font-family:'Archivo Black','Noto Sans SC',sans-serif;font-size:clamp(42px,7vw,104px);line-height:1.04}
+.hero h1 .lime{color:var(--lime)}
+.hero .sub{margin-top:26px;max-width:720px;color:var(--sage);font-size:17px}
+.hero .sub b{color:var(--ink)}
+.roles{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.role-chip{font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.06em;border:1px solid var(--line);
+  padding:9px 16px;color:var(--sage);background:rgba(244,244,237,.03)}
+.role-chip.hot{border-color:var(--lime);color:var(--lime)}
+.hero-cta{display:flex;gap:16px;margin-top:42px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-family:'IBM Plex Mono',monospace;
+  font-size:13px;letter-spacing:.08em;padding:14px 26px;transition:transform .2s,box-shadow .2s;cursor:pointer;border:none}
+.btn-solid{background:var(--lime);color:#111;font-weight:700}
+.btn-solid:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(210,255,0,.25)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
+.deco-ring{position:absolute;right:-140px;top:50%;transform:translateY(-50%);width:580px;height:580px;
+  border:1px solid rgba(210,255,0,.12);border-radius:50%;pointer-events:none}
+.deco-ring::before{content:'';position:absolute;inset:75px;border:1px dashed rgba(210,255,0,.14);border-radius:50%}
+.deco-ring::after{content:'';position:absolute;inset:155px;border:1px solid rgba(210,255,0,.1);border-radius:50%}
+@media(max-width:900px){.deco-ring{display:none}}
+
+/* stats */
+.stats{border-bottom:1px solid var(--line);background:var(--bg)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);padding:0;border-inline:48px solid var(--bg)}
+.stat{background:var(--bg);padding:44px 36px}
+.stat .v{font-family:'Archivo Black',sans-serif;font-size:clamp(34px,3.6vw,54px);color:var(--lime);line-height:1}
+.stat .v small{font-size:.45em;color:var(--ink)}
+.stat .l{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--dim);margin-top:12px}
+.stat p{font-size:13px;color:var(--sage);margin-top:8px}
+@media(max-width:1000px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.stats .wrap{grid-template-columns:1fr}}
+
+/* sections */
+section{padding:110px 0;border-bottom:1px solid var(--line)}
+.sec-head{margin-bottom:54px}
+.sec-num{font-family:'IBM Plex Mono',monospace;color:var(--lime);font-size:13px;letter-spacing:.3em;margin-bottom:14px}
+.sec-title{font-family:'Archivo Black','Noto Sans SC',sans-serif;font-size:clamp(30px,4.2vw,56px);line-height:1.08}
+.sec-sub{margin-top:16px;color:var(--sage);max-width:720px;font-size:15.5px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* video grid */
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:22px}
+.vcard{position:relative;border:1px solid var(--line);background:var(--bg3);cursor:pointer;overflow:hidden;
+  transition:transform .25s,border-color .25s}
+.vcard:hover{transform:translateY(-6px);border-color:var(--lime)}
+.vcard .thumb{position:relative;aspect-ratio:9/16;overflow:hidden}
+.vcard .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;filter:saturate(.92)}
+.vcard:hover .thumb img{transform:scale(1.05)}
+.vcard .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(to top,rgba(17,17,18,.72),transparent 55%)}
+.vcard .play span{width:52px;height:52px;border-radius:50%;background:rgba(210,255,0,.92);color:#111;
+  display:flex;align-items:center;justify-content:center;font-size:18px;transition:transform .25s}
+.vcard:hover .play span{transform:scale(1.12)}
+.vcard .meta{padding:14px 16px 16px}
+.vcard .tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:var(--lime)}
+.vcard h3{font-size:15px;margin-top:6px}
+.vcard .dur{position:absolute;top:10px;right:10px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;
+  background:rgba(17,17,18,.8);padding:3px 8px;color:var(--ink)}
+.vfeat{grid-column:span 2}
+@media(max-width:560px){.vfeat{grid-column:span 1}}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:200;background:rgba(10,10,10,.92);display:none;align-items:center;justify-content:center;backdrop-filter:blur(6px)}
+.modal.open{display:flex}
+.modal .box{position:relative;height:92vh;aspect-ratio:9/16;max-width:92vw}
+.modal video{width:100%;height:100%;background:#000;border:1px solid var(--line)}
+.modal .close{position:absolute;top:-52px;right:0;background:none;border:1px solid var(--line);color:var(--ink);
+  font-family:'IBM Plex Mono',monospace;font-size:12px;padding:8px 18px;cursor:pointer;letter-spacing:.1em}
+.modal .close:hover{border-color:var(--lime);color:var(--lime)}
+.modal .mtitle{position:absolute;top:-52px;left:0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--sage);letter-spacing:.08em}
+
+/* site projects */
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.scard{border:1px solid var(--line);background:var(--bg3);transition:border-color .25s,transform .25s;display:block;text-decoration:none;color:inherit}
+.scard:hover{border-color:var(--lime);transform:translateY(-5px)}
+.scard .shot{aspect-ratio:16/9.2;overflow:hidden;border-bottom:1px solid var(--line);position:relative}
+.scard .shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s}
+.scard:hover .shot img{transform:scale(1.03)}
+.scard .live{position:absolute;top:14px;right:14px;background:var(--lime);color:#111;font-family:'IBM Plex Mono',monospace;
+  font-size:10.5px;font-weight:700;letter-spacing:.1em;padding:5px 12px}
+.scard .body{padding:26px 30px 30px}
+.scard .st{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--lime);letter-spacing:.18em}
+.scard h3{font-size:21px;margin:10px 0 8px}
+.scard p{font-size:14px;color:var(--sage)}
+.scard .url{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--dim);margin-top:16px;word-break:break-all}
+.scard .url b{color:var(--lime2)}
+@media(max-width:900px){.sgrid{grid-template-columns:1fr}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.skill{background:var(--bg3);padding:32px 30px;transition:background .25s}
+.skill:hover{background:#20241a}
+.skill .sn{font-family:'IBM Plex Mono',monospace;color:var(--lime);font-size:11px;letter-spacing:.2em;margin-bottom:14px}
+.skill h3{font-size:18px;margin-bottom:10px}
+.skill p{color:var(--sage);font-size:14px}
+.skill ul{list-style:none;margin-top:12px}
+.skill li{font-size:13px;color:var(--sage);padding:4px 0 4px 18px;position:relative}
+.skill li::before{content:'—';position:absolute;left:0;color:var(--lime2)}
+@media(max-width:960px){.skills{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.skills{grid-template-columns:1fr}}
+
+/* outro */
+.outro{text-align:center;padding:130px 0;border-bottom:none}
+.outro h2{font-family:'Archivo Black','Noto Sans SC',sans-serif;font-size:clamp(30px,4.4vw,58px);line-height:1.12}
+.outro p{color:var(--sage);margin:22px auto 0;max-width:620px;font-size:15.5px}
+footer{padding:34px 0;border-top:1px solid var(--line);background:var(--bg)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--dim);letter-spacing:.1em}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="progress"></div>
+<nav>
+  <span class="logo">PORTFOLIO / AI SHORT DRAMA</span>
+  <div class="links">
+    <a href="#works">成片作品</a><a href="#systems">自研系统</a><a href="#skills">能力矩阵</a><a href="#contact">合作</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="deco-ring"></div>
+  <div class="wrap">
+    <div class="kicker">韦诗舟 · PERSONAL PORTFOLIO · 2026</div>
+    <h1>AI 短剧编剧<br><span class="lime">× 海外内容运营</span></h1>
+    <p class="sub">求职意向：海外内容运营 / 海外短剧编剧（全职）· 现居深圳 · 随时到岗。<b>150 部行业爆款剧库从 0 到 1 搭建</b>（自建横纵题材象限标签体系）→ <b>基于数据模型批量产出 100 部标准化剧本产能库</b>（适配 TikTok & 小程序双平台投放）→ <b>参与项目首投 ROI 1.05</b>，跑通正向回收模型。另有两套自研 AI 工作流系统与多部 AI 真人短剧成片。</p>
+    <div class="roles">
+      <span class="role-chip hot">海外短剧编剧</span>
+      <span class="role-chip hot">海外内容运营</span>
+      <span class="role-chip">AI 真人短剧制作</span>
+      <span class="role-chip">剧本商务</span>
+      <span class="role-chip">OPC / FDE 基地申报流程</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-solid" href="#works">看成片作品 ↓</a>
+      <a class="btn btn-ghost" href="#systems">看自研系统 →</a>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><div class="v">150<small> 部</small></div><div class="l">DRAMA DATABASE · 0→1</div><p>独立完成行业剧库搭建并任 owner，自建「蓝海/热门 × 甜/虐 × 复仇/逆袭/女性爽点」横纵象限标签体系</p></div>
+    <div class="stat reveal"><div class="v">100<small> 部</small></div><div class="l">SCRIPT CAPACITY LIBRARY</div><p>标准化剧本产能库（主编 S 级 10 部），对标剧库数据模型，适配 TikTok & 小程序双平台投放</p></div>
+    <div class="stat reveal"><div class="v">1.05</div><div class="l">DAY-1 ROI</div><p>参与项目首投 ROI 1.05，跑通正向回收模型，属行业优质投产水平</p></div>
+    <div class="stat reveal"><div class="v">2<small> 套</small></div><div class="l">SELF-BUILT SYSTEMS</div><p>自研 AI 编剧工业化 SOP ＋ AI 短剧项目演示系统（见下方在线版本）</p></div>
+  </div>
+</div>
+
+<section id="works">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-num">01 / AI DRAMA WORKS</div>
+      <h2 class="sec-title">AI 真人短剧成片</h2>
+      <p class="sec-sub">以下为 AI 生成画面的竖屏短剧片段：剧本由自研编剧 SOP 产出，覆盖奇幻、狼人爱情、现代情感、悬疑惊悚等海外题材。点击任意卡片播放。</p>
+    </div>
+    <div class="vgrid">
+      <div class="vcard vfeat reveal" data-video="assets/videos/drama-fantasy-ep9.mp4" data-title="奇幻题材 · 第九集成片">
+        <div class="thumb"><img src="assets/posters/drama-fantasy-ep9.jpg" alt="奇幻短剧第九集">
+          <div class="play"><span>▶</span></div><span class="dur">68s · 1080P</span></div>
+        <div class="meta"><span class="tag">FANTASY · FULL EPISODE</span><h3>奇幻题材 · 第九集成片</h3></div>
+      </div>
+      <div class="vcard reveal" data-video="assets/videos/drama-werewolf-romance.mp4" data-title="狼人爱情 · 名场面">
+        <div class="thumb"><img src="assets/posters/drama-werewolf-romance.jpg" alt="狼人爱情短剧">
+          <div class="play"><span>▶</span></div><span class="dur">79s</span></div>
+        <div class="meta"><span class="tag">WEREWOLF ROMANCE</span><h3>狼人爱情 · 名场面</h3></div>
+      </div>
+      <div class="vcard reveal" data-video="assets/videos/drama-modern-breakup.mp4" data-title="现代情感 · 签字分手">
+        <div class="thumb"><img src="assets/posters/drama-modern-breakup.jpg" alt="现代情感短剧">
+          <div class="play"><span>▶</span></div><span class="dur">154s</span></div>
+        <div class="meta"><span class="tag">MODERN ROMANCE</span><h3>现代情感 · 签字分手</h3></div>
+      </div>
+      <div class="vcard reveal" data-video="assets/videos/drama-fantasy-cabin.mp4" data-title="奇幻题材 · 林中木屋">
+        <div class="thumb"><img src="assets/posters/drama-fantasy-cabin.jpg" alt="奇幻木屋场景">
+          <div class="play"><span>▶</span></div><span class="dur">120s</span></div>
+        <div class="meta"><span class="tag">FANTASY · SCENE</span><h3>奇幻题材 · 林中木屋</h3></div>
+      </div>
+      <div class="vcard reveal" data-video="assets/videos/drama-emotional-scene.mp4" data-title="情绪戏 · 崩溃独白">
+        <div class="thumb"><img src="assets/posters/drama-emotional-scene.jpg" alt="情绪戏片段">
+          <div class="play"><span>▶</span></div><span class="dur">60s</span></div>
+        <div class="meta"><span class="tag">EMOTIONAL SCENE</span><h3>情绪戏 · 崩溃独白</h3></div>
+      </div>
+      <div class="vcard reveal" data-video="assets/videos/drama-neon-thriller.mp4" data-title="悬疑惊悚 · 红色走廊">
+        <div class="thumb"><img src="assets/posters/drama-neon-thriller.jpg" alt="悬疑惊悚片段">
+          <div class="play"><span>▶</span></div><span class="dur">25s</span></div>
+        <div class="meta"><span class="tag">THRILLER · TEASER</span><h3>悬疑惊悚 · 红色走廊</h3></div>
+      </div>
+      <div class="vcard reveal" data-video="assets/videos/drama-teaser-confrontation.mp4" data-title="预告片 · 对峙">
+        <div class="thumb"><img src="assets/posters/drama-teaser-confrontation.jpg" alt="对峙预告片">
+          <div class="play"><span>▶</span></div><span class="dur">15s</span></div>
+        <div class="meta"><span class="tag">TEASER · 15s</span><h3>预告片 · 对峙</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="systems" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-num">02 / SELF-BUILT SYSTEMS · LIVE</div>
+      <h2 class="sec-title">两套自研系统，已部署在线</h2>
+      <p class="sec-sub">不是 PPT 概念，是点开就能用的完整网页。一套管「怎么写出能卖的剧本」，一套管「怎么把项目讲给别人听」。</p>
+    </div>
+    <div class="sgrid">
+      <a class="scard reveal" href="https://siijururuo-afk.github.io/writer-sop-portfolio/" target="_blank" rel="noopener">
+        <div class="shot"><img src="assets/posters/site-writersop.jpg" alt="编剧工业化SOP网站"><span class="live">● LIVE</span></div>
+        <div class="body">
+          <span class="st">SYSTEM 01 · SCREENWRITING SOP</span>
+          <h3>AI 短剧编剧工业化 SOP</h3>
+          <p>把编剧手册拆成 10 步可执行流程：5 套提示词模具、60 集节奏钩子规划表、20 项译制本土化检查、100 分审核评分与 3 道质量闸门。每一步写清人工做什么、AI 交什么、什么情况必须停。</p>
+          <div class="url">siijururuo-afk.github.io<b>/writer-sop-portfolio/</b> ↗</div>
+        </div>
+      </a>
+      <a class="scard reveal" href="https://siijururuo-afk.github.io/auroraboost-presentation/" target="_blank" rel="noopener">
+        <div class="shot"><img src="assets/posters/site-auroraboost.jpg" alt="合作方案演示网站"><span class="live">● LIVE</span></div>
+        <div class="body">
+          <span class="st">SYSTEM 02 · INTERACTIVE DECK</span>
+          <h3>AI 短剧创作师项目 · 交互演示</h3>
+          <p>面向地方合作机构的 19 页交互式演示：键盘/触屏翻页、动画编排、黑金视觉体系，同一套内容同步输出可编辑 PPT 版本，用于现场汇报与商务洽谈。</p>
+          <div class="url">siijururuo-afk.github.io<b>/auroraboost-presentation/</b> ↗</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-num">03 / CAPABILITY MATRIX</div>
+      <h2 class="sec-title">能力矩阵</h2>
+      <p class="sec-sub">内容侧全链路：从题材判断、剧本生产、AI 制作到上线回收，每个环节都有可展示的作品或数据。</p>
+    </div>
+    <div class="skills">
+      <div class="skill reveal"><div class="sn">A / WRITING</div><h3>编剧工业化</h3><p>把创作变成可质检的流水线。</p>
+        <ul><li>100 部标准化剧本产能库，主编 S 级 10 部</li><li>全团队剧本写作规范制定者：16 词/句、每集 2—3 强钩子、10 集大反转、付费点节奏</li><li>自研 10 步编剧 SOP 与 5 套提示词模具</li><li>题材覆盖 LGBT 都市情感、狼人吸血鬼、末世女频</li></ul></div>
+      <div class="skill reveal"><div class="sn">B / OPERATION</div><h3>内容运营</h3><p>用标签和数据管理内容资产。</p>
+        <ul><li>150 部行业剧库 0→1 搭建并担任 owner</li><li>横纵象限题材标签体系 ＋ 剧本 SABC 评估标准</li><li>100 部 AIGC 剧本投资初筛，报告直供管理层</li><li>周更行业简报（DataEye / Sensor Tower），驱动选题立项</li><li>小红书海外账号 14 天涨粉 2900+、获赞收藏 51.8 万</li></ul></div>
+      <div class="skill reveal"><div class="sn">C / AI PRODUCTION</div><h3>AI 短剧制作</h3><p>从文字到竖屏成片。</p>
+        <ul><li>AI 真人短剧全流程制作</li><li>2 部 S 级作品签约海外承制、进入全球发行（合作方含纽约电影学院工作室）</li><li>译制本土化 20 项检查标准</li><li>多题材成片案例（见上方视频）</li></ul></div>
+      <div class="skill reveal"><div class="sn">D / BUSINESS</div><h3>剧本商务</h3><p>内容变现的另一条腿。</p>
+        <ul><li>主导 200 部海外短剧版权采购，65 万预算压至 25 万、成本压降超 60%</li><li>十余份跨境商务合同起草，全部通过法务</li><li>承制供应商准入 SOP 与试片评估体系</li><li>小红书获客—询单—成交闭环，可带小组作战</li></ul></div>
+      <div class="skill reveal"><div class="sn">E / POLICY</div><h3>政策与申报</h3><p>懂内容，也懂行业规则。</p>
+        <ul><li>熟悉 OPC 算力生态、FDE 数字文化出海基地申报全流程</li><li>模力营 AI 生态社区入驻申报（审批通过）</li><li>AI 短剧创作师培训项目全链路统筹（课程/招生/交付 SOP/校企合作）</li><li>内容合规风控（政治/宗教/未成年人）</li></ul></div>
+      <div class="skill reveal"><div class="sn">F / TOOLING</div><h3>工具与交付</h3><p>把成果做成别人能用的形态。</p>
+        <ul><li>交互式 HTML 演示（键盘/触屏翻页）</li><li>可编辑 PPT 同步输出</li><li>PDF 手册与流程文档沉淀</li><li>AI 剧本创作与提示词建模</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="outro" id="contact">
+  <div class="wrap">
+    <div class="sec-num" style="text-align:center">04 / CONTACT</div>
+    <h2>找海外短剧编剧或内容运营，<br>我们可以聊聊</h2>
+    <p>韦诗舟 · 求职意向：海外内容运营 / 海外短剧编剧（全职）· 现居深圳 · 随时到岗。本页可作为简历附件直接发送：视频成片、在线系统、数据成绩均已在上文展示。</p>
+    <div class="roles" style="justify-content:center;margin-top:28px">
+      <a class="role-chip hot" href="tel:15778214773" style="text-decoration:none">电话 15778214773</a>
+      <a class="role-chip hot" href="mailto:siiju.ruruo@gmail.com" style="text-decoration:none">邮箱 siiju.ruruo@gmail.com</a>
+      <span class="role-chip">现居深圳 · 随时到岗 · 全职</span>
+    </div>
+    <div class="hero-cta" style="justify-content:center">
+      <a class="btn btn-solid" href="https://siijururuo-afk.github.io/writer-sop-portfolio/" target="_blank" rel="noopener">编剧 SOP 系统 ↗</a>
+      <a class="btn btn-ghost" href="https://siijururuo-afk.github.io/auroraboost-presentation/" target="_blank" rel="noopener">项目演示 ↗</a>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">
+  <span>韦诗舟 · AI SHORT-DRAMA PORTFOLIO — SCREENWRITING × CONTENT OPS</span>
+  <span>SHENZHEN · AVAILABLE FULL-TIME</span>
+</div></footer>
+
+<div class="modal" id="vmodal">
+  <div class="box">
+    <div class="mtitle" id="mtitle"></div>
+    <button class="close" id="mclose">关闭 ✕ (ESC)</button>
+    <video id="mvideo" controls playsinline preload="metadata"></video>
+  </div>
+</div>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+reveals.forEach(s=>io.observe(s));
+addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-innerHeight;
+  document.querySelector('.progress').style.width=(scrollY/Math.max(max,1)*100)+'%'},{passive:true});
+
+const modal=document.getElementById('vmodal'), mv=document.getElementById('mvideo'), mt=document.getElementById('mtitle');
+document.querySelectorAll('.vcard').forEach(c=>{
+  c.addEventListener('click',()=>{
+    mv.src=c.dataset.video; mt.textContent=c.dataset.title;
+    modal.classList.add('open'); document.body.style.overflow='hidden';
+    mv.play().catch(()=>{});
+  });
+});
+function closeModal(){modal.classList.remove('open');mv.pause();mv.removeAttribute('src');mv.load();document.body.style.overflow='';}
+document.getElementById('mclose').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeModal();});
+</script>
+</body>
+</html>
