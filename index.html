@@ -38,13 +38,6 @@ nav .links a:hover{color:var(--lime)}
              radial-gradient(800px 500px at 8% 88%,rgba(178,199,58,.06),transparent 60%),var(--bg2);
   border-bottom:1px solid var(--line);overflow:hidden}
 .hero .wrap{width:100%;position:relative;z-index:1;padding-top:100px;padding-bottom:64px}
-@media(max-width:760px){
-  .hero{min-height:100svh}
-  .hero .wrap{padding-top:100px;padding-bottom:48px}
-  .hero .kicker{font-size:11px;letter-spacing:.16em;overflow-wrap:anywhere}
-  .hero h1{font-size:clamp(30px,8.5vw,42px);line-height:1.2}
-  .hero .sub{font-size:15px;line-height:1.85}
-}
 .hero .kicker{font-family:'IBM Plex Mono',monospace;color:var(--lime);font-size:13px;letter-spacing:.32em;margin-bottom:26px}
 .hero h1{font-family:'Archivo Black','Noto Sans SC',sans-serif;font-size:clamp(42px,7vw,104px);line-height:1.04}
 .hero h1 .lime{color:var(--lime)}
@@ -159,6 +152,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
 @media (prefers-reduced-motion: reduce){
   *{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
+}
+@media(max-width:760px){
+  .hero{min-height:100svh}
+  .hero .wrap{padding-top:100px;padding-bottom:48px}
+  .hero .kicker{font-size:11px;letter-spacing:.16em;overflow-wrap:anywhere}
+  .hero h1{font-size:clamp(30px,8.5vw,42px);line-height:1.2}
+  .hero .sub{font-size:15px;line-height:1.85}
 }
 </style>
 </head>
